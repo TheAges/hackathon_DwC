@@ -1,7 +1,7 @@
 var face,
     gameOver=false;
     W = 1,
-    moltpex=0.1,
+    moltpex=0.16,
     lev=0;
 
 function preload() {

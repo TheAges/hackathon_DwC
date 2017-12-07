@@ -39,7 +39,7 @@ function draw() {
   if (lev>0.6) {gameOver=true;moltpex*=2}
   console.log(lev)
 	
-  if (chrismasDay==true;) {lev=1}
+  if (chrismasDay==true) {lev=1}
 
   var back = (lerpColor(color("#39b249"),color("#bc1616"),lev));
 

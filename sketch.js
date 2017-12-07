@@ -92,7 +92,7 @@ function draw() {
   textFont(font)
   textSize(70)
   textAlign(CENTER)
-	if (chrismasDay==true;) { text("Santa Claus is busy!",0,height*0.3) }
+	if (chrismasDay==true) { text("Santa Claus is busy!",0,height*0.3) }
  	else { text("Don't wake Santa Claus...",0,height*0.3) }
   pop()
 

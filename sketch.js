@@ -22,7 +22,7 @@ function setup() {
 
   if (windowWidth > windowHeight) {W = windowHeight/500} else {W = windowWidth/500}
 	
-  if ((Date.getMonth()==11)&&(Date.getDate()==25)) {chrismasDay=true;}
+  if ((month()==12)&&(day()==25)) {chrismasDay=true;}
 
   mic = new p5.AudioIn();
 	mic.start();

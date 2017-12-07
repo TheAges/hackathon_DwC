@@ -42,14 +42,14 @@ function draw() {
 
   translate(width/2,height/2)
 
-  image(flame,0,map(lev,0,1,200*W,10+Rand*5),width,height)
+  image(flame,0,map(lev,0,1,200*W,10+Rand*5*W),width,height)
 
   // push()
   // imageMode(CORNERS)
   //   image(flame,200*W,200*W,width-200*W,width-200*W)
   // pop()
-  image(cornaDx,map(lev,0,1,100*W,5),map(lev,0,1,100*W,5),500*W,500*W)
-  image(cornaSx,map(lev,0,1,-100*W,5),map(lev,0,1,100*W,5),500*W,500*W)
+  image(cornaDx,map(lev,0,1,100*W,5*W),map(lev,0,1,100*W,5*W),500*W,500*W)
+  image(cornaSx,map(lev,0,1,-100*W,5*W),map(lev,0,1,100*W,5*W),500*W,500*W)
 
   image(faceDown,0,0,500*W,500*W)
 
@@ -81,8 +81,8 @@ function draw() {
   image(cap,0,0,500*W,500*W)
 
   push()
-  fill(255,0,0,255-(frameCount*2))
-  stroke(255,252,255,255-(frameCount*2))
+  fill(255,0,0,255-(frameCount))
+  stroke(255,252,255,255-(frameCount))
   strokeWeight(3*W)
   textFont(font)
   textSize(70)

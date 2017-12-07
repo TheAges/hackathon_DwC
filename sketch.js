@@ -37,7 +37,7 @@ function draw() {
   if (lev > 1) {lev = 1}
   if ((lev>0)&&(gameOver!=true)) {lev -= 0.0075;}  //sensilbilità ritorno a 0
   if (lev>0.6) {gameOver=true;moltpex*=2}
-  console.log(lev)
+  //console.log(lev)
 	
   if (chrismasDay==true) {lev=1}
 
@@ -48,11 +48,7 @@ function draw() {
   translate(width/2,height/2)
 
   image(flame,0,map(lev,0,1,200*W,10+Rand*5*W),width,height)
-
-  // push()
-  // imageMode(CORNERS)
-  //   image(flame,200*W,200*W,width-200*W,width-200*W)
-  // pop()
+	
   image(cornaDx,map(lev,0,1,100*W,5*W),map(lev,0,1,100*W,5*W),500*W,500*W)
   image(cornaSx,map(lev,0,1,-100*W,5*W),map(lev,0,1,100*W,5*W),500*W,500*W)
 

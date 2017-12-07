@@ -1,5 +1,6 @@
 var face,
-    gameOver=false;
+    gameOver=false,
+    chrismasDay=false,
     W = 1,
     moltpex=0.16,
     lev=0;
@@ -20,6 +21,8 @@ function setup() {
   noStroke()
 
   if (windowWidth > windowHeight) {W = windowHeight/500} else {W = windowWidth/500}
+	
+  if ((Date.getMonth()==11)&&(Date.getDate()==25)) {chrismasDay=true;}
 
   mic = new p5.AudioIn();
 	mic.start();
@@ -35,6 +38,8 @@ function draw() {
   if ((lev>0)&&(gameOver!=true)) {lev -= 0.0075;}  //sensilbilità ritorno a 0
   if (lev>0.6) {gameOver=true;moltpex*=2}
   console.log(lev)
+	
+  if (chrismasDay==true;) {lev=1}
 
   var back = (lerpColor(color("#39b249"),color("#bc1616"),lev));
 
@@ -60,7 +65,7 @@ function draw() {
     fill(lerpColor(color("#000000"),color("#f41f1f"),lev))
       ellipse(-50*W,-40*W,40*W)
       ellipse(50*W,-40*W,40*W)
-    fill("black")
+    fill("white")
       ellipse(-50*W,-40*W,5*W)
       ellipse(50*W,-40*W,5*W)
     fill("#f5c8ab")
@@ -87,7 +92,8 @@ function draw() {
   textFont(font)
   textSize(70)
   textAlign(CENTER)
-  text("Don't wake santa claus!",0,height*0.3)
+	if (chrismasDay==true;) { text("Santa Claus is busy!",0,height*0.3) }
+ 	else { text("Don't wake Santa Claus...",0,height*0.3) }
   pop()
 
 

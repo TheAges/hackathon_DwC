@@ -24,7 +24,7 @@ function setup() {
 	
   if ((month()==12)&&(day()==25)) {chrismasDay=true;}
 	
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {alert("Hello! I am an alert box!!");}
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {alert("it looks like you are on a mobile device, this sketch may not work as intended. please use a desktop device for best experience");}
 
   mic = new p5.AudioIn();
 	mic.start();

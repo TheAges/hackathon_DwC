@@ -23,6 +23,8 @@ function setup() {
   if (windowWidth > windowHeight) {W = windowHeight/500} else {W = windowWidth/500}
 	
   if ((month()==12)&&(day()==25)) {chrismasDay=true;}
+	
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {alert("Hello! I am an alert box!!");}
 
   mic = new p5.AudioIn();
 	mic.start();
